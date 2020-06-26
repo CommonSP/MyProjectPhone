@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MyProjectPhone.Views.Authorization"
+             Title="Авторизация">
+    
+
+        <Grid>
+            <Grid.RowDefinitions  >
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            
+            
+            <StackLayout  Grid.Row="1" Margin="20" Spacing="20" TranslationY="200"  >
+                <Entry Text="{Binding login}" FontSize="30" HorizontalTextAlignment="Center" Placeholder="Логин"/>
+                <Entry Text="{Binding password}" FontSize="30" HorizontalTextAlignment="Center" Placeholder="Логин"/>
+            </StackLayout>
+
+        <Button x:Name="but" Command="{Binding command}" Grid.Row="2"  FontSize="20"  Text="Войти" HeightRequest="60" Margin="30"/>
+        <ActivityIndicator x:Name="loader" Grid.Row="2"  HeightRequest="60"  Color="Gray" IsRunning="false" IsVisible="false" Margin="30" IsEnabled="false"/>
+    </Grid>
+
+  
+    
+  
+</ContentPage>
